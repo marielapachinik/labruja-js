@@ -1,11 +1,15 @@
+/* Mi algoritmo consiste en efectuar la carga de personas con un cupo maximo indicado por el usuario.
+No se permite ingresar valores nulos */
+
 
 
 // 1-Declaro las variables en 0 o con texto vacío para poder emplearlas dentro del for
 
 nombre=" ";
 edad=0;
+let cupo= Number(prompt("Ingrese el cupo de personas permitido"))
 
-for (i=0; nombre!="-1"; i<=5) {
+for (i=0; nombre!="-1"; i<=cupo) {
     nombre= prompt("Ingrese un nombre o -1 para terminar");
 
     // 2- Utilizo un ciclo while que no me permita ingresar valores nulos en el nombre
@@ -24,8 +28,8 @@ for (i=0; nombre!="-1"; i<=5) {
     
     // 4- Implemento un mensaje cuando el cupo de carga de 5 personas permitidas está lleno y el break para que termine
     
-    if(i==5){
-        alert('Cupo lleno. El maximo permitido es de 5 personas.\n Presione ACEPTAR para cerrar');
+    if(i==cupo){
+        alert(`Cupo lleno. El maximo permitido es de ${cupo} personas.\n Presione ACEPTAR para cerrar`);
         break;
 
     }else{
